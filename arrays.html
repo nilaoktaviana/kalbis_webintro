@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var dompet = ["atm", "ktp", "sim", "kartu kredit"];
+var text;
+// mencetak isi keseluruhan array/dompet
+// dompet.valueOf();
+text = dompet.valueOf();
+document.write(text + "<br />");
+// dompet.toString();
+document.write(dompet.toString() + "<br />");
+// dompet.join(" + ");
+document.write(dompet.join(" + ") + "<br />");
+
+// menghapus isi terakhir dari array/dompet
+dompet.pop();
+document.write(dompet + "<br />");
+
+// menambah isi array di bagian akhir
+dompet.push("duit");
+dompet.push("50 ribu");
+dompet.push("100 perak");
+dompet.push("20 ribu");
+document.write(dompet.join(" + ")+ "<br />");
+
+// menghapus isi pertama dari array
+dompet.shift();
+document.write(dompet + "<br />");
+
+// menambah isi array di bagian awal
+dompet.unshift("atm baru");
+document.write(dompet + "<br />");
+
+// menghapus isi array pada index tertentu
+delete dompet[1];
+document.write(dompet + "<br />");
+
+// menyisipkan isi array pada posisi tertentu
+dompet.splice(1, 0, "hehe");
+document.write(dompet + "<br />");
+</script>
+
+</body>
+</html>

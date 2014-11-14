@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+</head>
+<body>
+<script type="text/javascript">
+//1. minta input jumlah mahasiswa, simpan dalam var jml_mhs
+var jml_mhs = window.prompt("Masukkan jumlah mahasiswa");
+var count = 0;
+var mhs=[];
+do {
+//2. minta input nama mahasiswa
+i = count+1;
+mhs[count] = [];
+mhs[count][0] = window.prompt("Masukkan nama mahasiswa ke-" + i);
+//3. minta input nilai tugas
+mhs[count][1] = window.prompt("Nilai tugas " + mhs[count][0]);
+//4. minta input nilai uts
+mhs[count][2] = window.prompt("Nilai uts " + mhs[count][0]);
+//5. minta input nilai uas
+mhs[count][3] = window.prompt("Nilai uas " + mhs[count][0]);
+//6. hitung nilai akhir
+mhs[count][4] = (mhs[count][1] * 0.2) + (mhs[count][2] * 0.3) + (mhs[count][3] * 0.5);
+count++;
+} while(count < jml_mhs);
+//7. sudah berapa kali menginput data mhs? jika masih kurang dari jml_mhs, ulangi langkah 2
+//8. cetak data mahasiswa dalam tabel
+//9. selesai
+</script>
+<table>
+	<tr>
+		<td>No</td>
+		<td>Nama</td>
+		<td>Tugas</td>
+		<td>UTS</td>
+		<td>UAS</td>
+		<td>Nilai Akhir</td>
+	</tr>
+	
+	<script>
+	for(i=0; i<jml_mhs; i++) {
+		x = i+1;
+		document.write("<tr>");
+		document.write("<td>" + x + "</td>");
+		document.write("<td>" + mhs[i][0] + "</td>");
+		document.write("<td>" + mhs[i][1] + "</td>");
+		document.write("<td>" + mhs[i][2] + "</td>");
+		document.write("<td>" + mhs[i][3] + "</td>");
+		document.write("<td>" + mhs[i][4] + "</td>");
+		document.write("</tr>");
+	}
+	</script>
+	
+</table>
+</body>
+</html>
