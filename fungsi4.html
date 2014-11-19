@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Function</title>
+</head>
+<body>
+
+<script type="text/javascript">
+function fungsiSaya(){
+	nama = document.getElementById("nama").value;
+	hasil = document.getElementById("hasil");
+	hasil.value = nama;
+}
+</script>
+<form action="" method="POST">
+	Nama:
+	<input type="text"
+		   name="nama"
+		   id="nama" />
+	<input type="button"
+		   name="kirim"
+		   value="Click Me!"
+		   onclick="fungsiSaya()" />
+	<br />
+	<input type="text" id="hasil" />
+</form>
+</body>
+</html>

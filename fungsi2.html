@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Function</title>
+</head>
+<body>
+
+<script type="text/javascript">
+// buat fungsi
+function hitung( nilai1, nilai2) {
+	n1 = parseInt(nilai1);
+	n2 = parseInt(nilai2);
+	jml = n1 + n2;
+	jml2 = n1 - n2;
+	jml3 = n1 * n2;
+	jml4 = n1 / n2;
+	document.write(jml);
+	document.write(jml2);
+	document.write(jml3);
+	document.write(jml4);
+}
+
+function mintaInput() {
+	a = window.prompt("Nilai 1:");
+	b = window.prompt("Nilai 2:");
+	hitung(a,b);
+}
+</script>
+
+<button onclick="mintaInput()">Click me</button>
+
+</body>
+</html>
