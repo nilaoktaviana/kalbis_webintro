@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects</title>
+</head>
+<body>
+
+<form action="" method="POST">
+Nama:
+<input type="text" id="nama" value="Richard Gere" disabled />
+<br />
+Ganti: <input type="text" id="ganti" />
+dengan: <input type="text" id="dengan" />
+<br />
+<input type="button" value="Ganti" onclick="gantiNama()" />
+</form>
+
+<script type="text/javascript">
+function gantiNama() {
+namaAsli = document.getElementById("nama").value;
+cariText = document.getElementById("ganti").value;
+textPengganti = document.getElementById("dengan").value;
+namaBaru = namaAsli.replace( cariText, textPengganti);
+
+document.getElementById("nama").value = namaBaru;
+}
+</script>
+
+</body>
+</html>

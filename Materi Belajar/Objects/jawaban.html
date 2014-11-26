@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz</title>
+	<script type="text/javascript">
+		sekarang = new Date();
+		var menitSekarang = sekarang.getMinutes();
+		var detikSekarang = sekarang.getSeconds();
+	</script>
+</head>
+<body>
+<form action="form.html" method="get">
+<label>Pertanyaan 1</label>
+<input type="text" name="pertanyaan1" value=" "/></br>
+<label>Pertanyaan 2</label>
+<input type="radio" name="pil" value="pil1"/>Pil 1
+<input type="radio" name="pil" value="pil2"/>Pil 2
+<input type="radio" name="pil" value="pil3"/>Pil 3</br>
+<label>Pertanyaan 3</label>
+<input type="checkbox" name="pilihan" value="pil1"/>Pil 1
+<input type="checkbox" name="pilihan" value="pil2"/>Pil 2
+<input type="checkbox" name="pilihan" value="pil3"/>Pil 3</br>
+<label>Pertanyaan 4</label>
+<select name=" ">
+<option value=" ">Jawaban</option>
+</select></br>
+<label>Pertanyaan 5</label>
+<textarea> </textarea></br>
+<input type="button" name="jawab" value="Jawab" onclick="durasi()"/>
+</form>
+
+<script type="text/javascript">
+function durasi() {
+	jawab = new Date();
+	menitJawab = jawab.getMinutes();
+	detikJawab = jawab.getSeconds();
+	
+	durasi= (menitJawab*60-menitSekarang*60)+(detikJawab-detikSekarang);
+	
+	
+}
+</script>
+
+</body>
+</html>
