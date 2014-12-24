@@ -1,0 +1,139 @@
+<!DOCTYPE.html>
+<html>
+<head>
+<title>tugas jquery</title>
+<style>
+	img{
+	display: none;
+	width: 568px;
+	height: 389px;
+	border-radius: 20px;
+	box-shadow: 10px 10px 10px white;
+	}
+	
+	h1{
+	margin-top: 20px;
+	display: inline-block;
+	font-size: 50px;
+	font-family: arial;
+	}
+	
+	#ket{
+	color: brown;
+	font-size: 40px;
+	}
+	
+	#bungkus{
+	width: 100%;
+	height: 800px;
+	background: #99FF66;
+	}
+	
+	#kotak{
+	width: 700px;
+	display:inline-block;
+	padding:20px;
+	background: #FFFF66;
+	border-radius: 20px;
+	}
+	
+	#klik{
+	width:700px;
+	display:inline-block;
+	padding: 10px;
+	background: #99FF66;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	}
+	
+	#prev{
+	display:inline-block;
+	background: #CC6699;
+	float: left;
+	margin-right: 500px;
+	padding: 10px;
+	border-radius: 20px;
+	}
+	#next{
+	display:inline-block;
+	background: #CC6699;
+	margin-left: 30px;
+	padding: 10px;
+	border-radius: 20px;
+	}
+	
+</style>
+<script type="text/javascript" src="jquery-1.11.1.min.js">
+</script>
+
+</head>
+
+<body>
+<div id="bungkus">
+
+	<center>
+	<h1>Gallery</h1>
+	<br>
+	<div id="klik">
+		<div id="prev"> <<<<<<< </div>
+		<div id="next"> >>>>>>> </div>
+	</div>
+	
+	<div id="kotak">
+		<h2 id="ket"> </h2>
+		<img src="gambar/satu.png"/>
+		<img src="gambar/dua.jpg"/>
+		<img src="gambar/tiga.jpg"/>
+		<img src="gambar/empat.jpg"/>
+	</div>
+	
+	<h4> Tugas Jquery Nila Oktaviana</h4>	
+	</center>
+	
+</div>
+
+<script type="text/javascript">
+	$posisi = $("img:first");
+	$posisi.show();
+	a=1;
+		
+		$("#next").click(function(){
+		if(a==4){
+			window.alert("Klik <<<Prev");
+			document.getElementById("ket").innerHTML = + a + " - 4";
+			$posisi = $("img:last");
+			$posisi.show();
+		a=4;	
+		}
+		if(a<4){
+		a++;
+		document.getElementById("ket").innerHTML = + a + " - 4";
+			$posisi.hide();
+			$posisi = $posisi.next();
+			$posisi.fadeIn();
+		}
+
+		});
+		
+		$("#prev").click(function(){
+		if(a==1){
+		a=1;
+		document.getElementById("ket").innerHTML = + a + " - 4";
+			$posisi = $("img:first");
+			$posisi.show();
+			window.alert("Klik Next>>>");
+		}
+		if(a>1){
+		a--;
+		document.getElementById("ket").innerHTML = + a + " - 4";
+			$posisi.hide();
+			$posisi = $posisi.prev();
+			$posisi.fadeIn();
+		}
+		
+		});
+	
+	document.getElementById("ket").innerHTML ="1 - 4";
+</script>
+</body>
+</html>
